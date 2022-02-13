@@ -13,4 +13,4 @@ while proposition_prix != prix:
     
       elif proposition_prix>prix:
           proposition_prix=int(input("c'est moins, veuillez réecrire un prix: "))
-print("félicitation vous avez trouver le juste prix ",prix)
+print(f"félicitation vous avez trouver le juste prix qui est de {prix}")

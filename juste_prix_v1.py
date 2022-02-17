@@ -4,7 +4,7 @@ from random import randint
 
 prix=randint(1, 100)
 
-proposition_prix= int(input("bienvenu à vous, proposer un prix: "))
+proposition_prix= int(input("bienvenu à vous, proposer un prix entre 1 et 100: "))
 
 while proposition_prix != prix:
       if proposition_prix < prix:

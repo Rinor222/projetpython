@@ -1,12 +1,15 @@
-from ast import In
+
 from random import randint
 
 
 prix=randint(1, 100)
 
-proposition_prix= int(input("bienvenue à vous, proposer un prix entre 1 et 100: "))
+tries=3
 
-while proposition_prix != prix:
+proposition_prix= int(input("bienvenu à vous, proposer un prix entre 1 et 100: "))
+while tries > 0:
+    
+   while proposition_prix != prix:
       if proposition_prix < prix:
           
           proposition_prix=int(input("c'est plus veuillez réecrire un prix: "))

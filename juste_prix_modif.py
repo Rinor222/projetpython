@@ -29,29 +29,28 @@ if proposition_mode==2:
       proposition_prix=int(input("veuillez proposer un prix entre 1 et 100. ATTENTION vous n'avez que 10 tentatives:"))
 
       while True:
+             tentative-=1
+             nombre_de_tentative+=1
              if proposition_prix==prix:
                  print(f"Félicitation vous avez trouver le juste prix qui était {prix} en {nombre_de_tentative} tentatives!")
                  exit()        
                            
-             if nombre_de_tentative == 9:
+             if nombre_de_tentative == 10:
                  print(f"Malheureusement vous avez perdu, la bonne réponse était {prix}. ")
                  exit()  
-             tentative-=1
-             nombre_de_tentative+=1
+             
               
   
              if proposition_prix < prix:
                  print(f"Il vous reste {tentative} tentatives.")
                  proposition_prix=int(input("C'est plus veuillez réecrire un prix: "))
     
-             if proposition_prix>prix:
+             elif proposition_prix > prix:
                  print(f"Il vous reste {tentative} tentatives.")
                  proposition_prix=int(input("C'est moins, veuillez réecrire un prix: "))
     
               
-             if proposition_prix==prix:
-                 print(f"Félicitation vous avez trouver le juste prix qui était {prix} en {nombre_de_tentative} tentatives!")
-                 exit()
+            
             
 #   pour le mode 3
 if proposition_mode==3:
@@ -60,7 +59,7 @@ if proposition_mode==3:
       choix_tentative=int(input("veuillez choisir votre nombre de tentative maximum(si vous choisisez le 0 vous vos tentatives seront illimité):"))
       tentative2=choix_tentative
       nombre_tentative2=1
-      tentative3=choix_tentative+1
+      
 
 while True: 
       if choix_tentative!=0:
@@ -86,7 +85,7 @@ while True:
                         
     
                  
-            # pour les tentative infinie          
+            # pour les tentatives infinie          
       else:
           if tentative2==0:
             proposition_prix= int(input(f"veuillez proposer un prix entre 1 et {max} :"))
